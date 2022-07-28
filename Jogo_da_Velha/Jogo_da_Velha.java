@@ -1,8 +1,8 @@
-package secao7parte2;
+package Jogo_da_Velha;
 
 import java.util.Scanner;
 
-public class ex25 {
+public class Jogo_da_Velha {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
