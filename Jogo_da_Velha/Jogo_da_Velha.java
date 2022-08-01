@@ -55,8 +55,8 @@ public class Jogo_da_Velha {
 		int jogador = 1;
 		Scanner teclado = new Scanner(System.in);
 		
-		//Laço que se repete enquanto nenhum dos jogadores ganhar o jogo.
-		while(verificarJogo(matriz, 1) == false) {
+		//Laço que se repete enquanto nenhum dos jogadores ganhar o jogo ou enquanto não "dar velha".
+		while(verificarJogo(matriz, 1) == false && verificarDeuVelha(matriz) == false) {
 			jogador = 1;
 			System.out.println("Jogador 1: ");
 			System.out.println("Insira a linha da sua jogada: ");
@@ -67,6 +67,12 @@ public class Jogo_da_Velha {
 			//Verifica e valida a jogada, atualizando a matriz.
 			matriz = verificarJogada(matriz, jogada[0], jogada[1], jogador);
 			mostraMatriz(matriz);
+			
+			//Verifica se "deu velha".
+			if(verificarDeuVelha(matriz) == true) {
+				System.out.println("Deu Velha!");
+				break;
+			}
 			
 			//Verifica se o jogador 1 venceu.
 			if(verificarJogo(matriz, 1) == true) {
@@ -83,6 +89,12 @@ public class Jogo_da_Velha {
 			
 			matriz = verificarJogada(matriz, jogada[0], jogada[1], jogador);
 			mostraMatriz(matriz);
+			
+			//Verifica se "deu velha".
+			if(verificarDeuVelha(matriz) == true) {
+				System.out.println("Deu Velha!");
+				break;
+			}
 			
 			//Verifica se jogador 2 venceu.
 			if(verificarJogo(matriz, 2) == true) {
@@ -141,5 +153,22 @@ public class Jogo_da_Velha {
 		}
 		
 		return resultado;
+	}
+	
+	/**
+	 * Verifica se "deu velha", ou seja, se toda a matriz foi preenchida, mas nenhum dos jogadores conseguiu ganhar. Dessa maneira, o jogo termina em empate.
+	 * @param matriz
+	 * @return Se true: Deu velha.
+	 */
+	public static boolean verificarDeuVelha(int[][] matriz) {
+		boolean deu_velha = false;
+		
+		//Checa se todos os índices da matriz já foram preenchidos com jogadas.
+		if(matriz[0][0] != 0 && matriz[0][1] != 0 && matriz[0][2] != 0 && matriz[1][0] != 0 && matriz[1][1] != 0 && matriz[1][2] != 0 && matriz[2][0] != 0 && matriz[2][1] != 0 && matriz[2][2] != 0) {
+			System.out.println("Deu Velha!");
+			deu_velha = true;
+		}
+		
+		return deu_velha;
 	}
 }
