@@ -9,6 +9,15 @@ Os jogadores devem inserir a linha e a coluna em que desejam realizar as suas jo
 
 # Instalação
 
-Para o desenvolvimento do projeto foi utilizada a IDE Eclipse, que pode ser baixada ![aqui](https://www.eclipse.org/downloads/)
+* Para o desenvolvimento do projeto foi utilizada a IDE Eclipse, que pode ser baixada ["aqui"](https://www.eclipse.org/downloads/)
+
+* É necessário ter o Java instalado na máquina que irá rodar o programa. Para saber se sua máquina está com o Java instalado, rode o seguinte comando no terminal: 
+
+```cmd
+java --version
+```
+Se o comando for reconhecido, a versão do Java instalado será exibida. É recomendado sempre ter instalado a versão LTS mais recente do Java.
+
+Caso a sua máquina não tenha o Java instalado, a instalação pode ser realizada ["aqui"](https://www.java.com/pt-BR/)
 
 
