@@ -64,10 +64,15 @@ public class Jogo_da_Velha {
 			System.out.println("Insira a coluna da sua jogada: ");
 			jogada[1] = teclado.nextInt();
 			
-			//Verifica e valida a jogada, atualizando a matriz.
-			matriz = verificarJogada(matriz, jogada[0], jogada[1], jogador);
-			mostraMatriz(matriz);
-			
+			//Tratamento de exceções, caso o jogador insira algum índice que não exista na matriz.
+			try {
+				//Verifica e valida a jogada, atualizando a matriz.
+				matriz = verificarJogada(matriz, jogada[0], jogada[1], jogador);
+				mostraMatriz(matriz);
+			}catch(ArrayIndexOutOfBoundsException e) {
+				System.out.println("\nÍndice inválido. Jogador " + jogador + " perdeu a vez!\n");
+			}
+				
 			//Verifica se "deu velha".
 			if(verificarDeuVelha(matriz) == true) {
 				System.out.println("Deu Velha!");
@@ -87,8 +92,12 @@ public class Jogo_da_Velha {
 			System.out.println("Insira a coluna da sua jogada: ");
 			jogada[1] = teclado.nextInt();
 			
-			matriz = verificarJogada(matriz, jogada[0], jogada[1], jogador);
-			mostraMatriz(matriz);
+			try {
+				matriz = verificarJogada(matriz, jogada[0], jogada[1], jogador);
+				mostraMatriz(matriz);
+			}catch(ArrayIndexOutOfBoundsException e) {
+				System.out.println("Índice inválido. Jogador " + jogador + " perdeu a vez!\n");
+			}
 			
 			//Verifica se "deu velha".
 			if(verificarDeuVelha(matriz) == true) {
