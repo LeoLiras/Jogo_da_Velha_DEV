@@ -9,7 +9,7 @@ Os jogadores devem inserir a linha e a coluna em que desejam realizar as suas jo
 
 # Instalação
 
-* Para o desenvolvimento do projeto foi utilizada a IDE Eclipse, que pode ser baixada [aqui](https://www.eclipse.org/downloads/). Entretanto, é possível rodar o arquivo diretamente pelo terminal do computador.
+* Para o desenvolvimento do projeto foi utilizada a **IDE Eclipse**, que pode ser baixada [aqui](https://www.eclipse.org/downloads/). Entretanto, é possível rodar o arquivo diretamente pelo terminal do computador.
 
 * É necessário ter o Java instalado na máquina que irá rodar o programa. Para saber se sua máquina está com o Java instalado, rode o seguinte comando no terminal: 
 
@@ -22,7 +22,7 @@ Caso a sua máquina não tenha o Java instalado, a instalação pode ser realiza
 
 # Arquivo Executável
 
-É possível visualizar o projeto sem necessariamente o uso do Eclipse IDE, através do arquivo executável .jar disponibilizado. Caso o arquivo não abra após ser clicado, basta rodar o seguinte comando no terminal, e o projeto deve ser executado normalmente: 
+É possível visualizar o projeto sem necessariamente o uso do **Eclipse IDE**, através do arquivo executável .jar disponibilizado. Caso o arquivo não abra após ser clicado, basta rodar o seguinte comando no terminal, e o projeto deve ser executado normalmente: 
 
 ```cmd
 java -jar Jogo_da_velha_dev.jar
