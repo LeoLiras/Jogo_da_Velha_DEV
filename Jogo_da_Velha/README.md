@@ -20,6 +20,14 @@ Se o comando for reconhecido, a versão do Java instalado será exibida. É reco
 
 Caso a sua máquina não tenha o Java instalado, a instalação pode ser realizada [aqui](https://www.java.com/pt-BR/). Após isso, basta rodar o arquivo pela IDE Eclipse ou diretamente pelo terminal do computador.
 
+# Arquivo Executável
+
+É possível visualizar o projeto sem necessariamente o uso do Eclipse IDE, através do arquivo executável .jar disponibilizado. Caso o arquivo não abra após ser clicado, basta rodar o seguinte comando no terminal, e o projeto deve ser executado normalmente: 
+
+```cmd
+java -jar Jogo_da_velha_dev.jar
+```
+
 
 
 
